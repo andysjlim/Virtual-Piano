@@ -1,48 +1,60 @@
-$(document).ready(function() {
-    var key = 12;
+var key = document.getElementById("newKey").value;
 
-	$('.one').click(function() {
+document.getElementById("newKey").onchange = function(){
+    key = document.getElementById("newKey").value;
+    console.log(key);
+}
 
-		var noteOne = new Audio("sounds/" + key + ".mp3");
-		noteOne.play();
-	});
 
-	$('.two').click(function() {
-		var noteTwo = new Audio("sounds/" + (key + 2) + ".mp3");
+document.getElementsByClassName("one").onclick = function(){
+    console.log(key);
+    var noteOne = new Audio("sounds/" + key + ".mp3)");
+    noteOne.play();
+}
+
+$(".one").click(function() {
+        var noteTwo = new Audio("sounds/" + key + ".mp3");
         noteTwo.play();
-	});
+        //$(".one").jump();
+});	
 
-	$('.three').click(function() {
-        var noteThree = new Audio("sounds/" + (key + 4) + ".mp3");
-        noteThree.play();
-	});
+$(".two").click(function() {
+        var noteTwo = new Audio("sounds/" + (Number(key) + 2) + ".mp3");
+        noteTwo.play();
+        //$(".two").jump();
+});	
 
-	$('.four').click(function() {
-        var noteFour = new Audio("sounds/" + (key + 5) + ".mp3");
-        noteFour.play();
-	});
+$(".three").click(function() {
+   var noteThree = new Audio("sounds/" + (Number(key) + 4) + ".mp3");
+    noteThree.play();
+});
 
-	$('.five').click(function() {
-        var noteFive = new Audio("sounds/" + (key + 7) + ".mp3");
-        noteFive.play();
-	});
+$(".four").click(function() {
+    var noteFour = new Audio("sounds/" + (Number(key) + 5) + ".mp3");
+    noteFour.play();
+});
 
-	$('.six').click(function() {
-        var noteSix = new Audio("sounds/" + (key + 9) + ".mp3");
-        noteSix.play();
-	});
+$(".five").click(function() {
+    var noteFive = new Audio("sounds/" + (Number(key) + 7) + ".mp3");
+    noteFive.play();
+});
 
-	$('.seven').click(function() {
-        var noteSeven = new Audio("sounds/" + (key + 11) + ".mp3");
-        noteSeven.play();
-	});
+$(".six").click(function() {
+     var noteSix = new Audio("sounds/" + (Number(key) + 9) + ".mp3");
+     noteSix.play();
+});
 
-	$('.eight').click(function() {
-        var noteEight = new Audio("sounds/" + (key + 12) + ".mp3");
-        noteEight.play();
-	});
+$(".seven").click(function() {
+     var noteSeven = new Audio("sounds/" + (Number(key) + 11) + ".mp3");
+    noteSeven.play();
+});
 
-	$(document).keydown(function(e) {
+$(".eight").click(function() {
+    var noteEight = new Audio("sounds/" + (Number(key) + 12) + ".mp3");
+    noteEight.play();
+});
+
+$(document).keydown(function(e) {
     switch(e.which) {
         case 37: // left
             key -= 12;
@@ -63,18 +75,20 @@ $(document).ready(function() {
         default: return; // exit this handler for other keys
     }
     e.preventDefault(); // prevent the default action (scroll / move caret)
-});
+    });
 
-	$(document).keyup(function(e) {
-    switch(e.which) {
-        case 37: // left
-            key += 12;
-        break;
+$(document).keyup(function(e) {
+ switch(e.which) {
+       case 37: // left
+           key += 12;
+      break;
 
         case 38: // up
+        console.log("UP REMOVED");
         break;
 
         case 39: // right
+        console.log("RIGHT REMOVED");
         	key = -12;
         break;
 
@@ -85,24 +99,3 @@ $(document).ready(function() {
     }
     e.preventDefault(); // prevent the default action (scroll / move caret)
 });
-
-    function changeKey() {
-    key = this.options[this.selectedIndex].value;
-    }	
-
-
-
-	$('newKey').onchange = changeKey;
-
-});
-
-
-/*
-	
-
-*/
-
-/* 
-<audio id="C4" src=""></audio>
-<audio id=
-*/

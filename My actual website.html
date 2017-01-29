@@ -7,15 +7,15 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
   <link rel = "stylesheet" href = "piano.css"/>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-  <script type='text/javascript' src='piano.js'></script>
+  
 </head>
 <body>
     <img src ="images/ludi.gif"/>
     <div class ="container-fluid">
     <div class ="row">
       <div class="col-sm-1" id = "key">
-        <form>
-          <select id="newKey">
+        <form >
+          <select id = "newKey">
             <option value ="3">C</option>
             <option value ="4">C#/Db</option>
             <option value ="5">D</option>
@@ -25,7 +25,7 @@
             <option value ="9">F#/Gb</option>
             <option value ="10">G</option>
             <option value ="11">Ab</option>
-            <option value ="0">A</option>
+            <option selected value ="0">A</option>
             <option value ="1">Bb</option>
             <option value ="2">B/Cb</option>
           </select>
@@ -43,8 +43,7 @@
       <div class="col-sm-1"></div>
       <div class="col-sm-1"></div>
     </div>
-    <div class="bottom">
-
     </div>
-    </div>
+</body>
 </html>
+<script type='text/javascript' src='piano.js'></script>
